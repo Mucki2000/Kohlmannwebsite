@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · Kohlmann Banquetes</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+  :root { --ph-h: min(45vh, 420px); }
+
+  .form-sec { background: var(--cream); padding: 140px 24px; }
+  .form-wrap { max-width: 1200px; margin: 0 auto; }
+  .contact-grid { display: grid; grid-template-columns: 320px 1fr; gap: 96px; align-items: start; }
+  @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr !important; gap: 56px !important; } }
+
+  .addr { display: flex; flex-direction: column; gap: 28px; }
+  .addr-block + .addr-block { border-top: 1px solid var(--navy-25); padding-top: 24px; }
+  .addr-label { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--navy-60); margin-bottom: 10px; }
+  .addr-lead { font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: 28px; line-height: 1.2; color: var(--navy); text-decoration: none; display: block; }
+  .addr-text { margin-top: 6px; font-family: var(--font-serif); font-size: 17px; line-height: 1.72; letter-spacing: 0.04em; color: var(--navy); }
+  a.addr-mail { display: block; margin-top: 6px; font-family: var(--font-serif); font-size: 17px; line-height: 1.5; letter-spacing: 0.04em; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--navy-25); padding-bottom: 2px; width: fit-content; }
+
+  .form-head { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 40px; }
+  .form-head h2 { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+  .form-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.25rem); text-transform: uppercase; color: var(--navy); }
+  .form-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.25rem, 4vw, 4rem); line-height: 0.96; letter-spacing: -0.005em; color: var(--navy); }
+  .form-sub { margin: 0; max-width: 480px; font-family: var(--font-serif); font-size: 17px; line-height: 1.72; letter-spacing: 0.04em; color: var(--navy-80); }
+
+  .quote-form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px 28px; }
+  .qf-field { display: flex; flex-direction: column; gap: 6px; }
+  .qf-field.span2 { grid-column: span 2; }
+  .qf-label { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--navy-60); }
+  .qf-input, .qf-select, .qf-textarea {
+    appearance: none; background: transparent; border: 0;
+    border-bottom: 1px solid var(--navy-25); padding: 10px 0;
+    font-family: var(--font-serif); font-size: 17px; color: var(--navy);
+    outline: none; border-radius: 0; width: 100%;
+  }
+  .qf-select { padding-right: 24px; }
+  .qf-textarea { resize: vertical; }
+  .qf-input:focus, .qf-select:focus, .qf-textarea:focus { border-bottom: 2px solid var(--navy); padding-bottom: 9px; }
+  .qf-actions { grid-column: span 2; display: flex; gap: 14px; align-items: center; margin-top: 12px; }
+  .qf-thanks { text-align: center; padding: 60px 20px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .qf-thanks h3 { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: 64px; line-height: 1; color: var(--navy); }
+  .qf-thanks p { margin: 0; max-width: 460px; font-family: var(--font-serif); font-size: 17px; line-height: 1.7; letter-spacing: 0.04em; color: var(--navy-80); }
+  @media (max-width: 720px) {
+    .quote-form { grid-template-columns: 1fr; }
+    .qf-field.span2, .qf-actions { grid-column: span 1; }
+  }
+
+  .map { background: var(--cream-warm); padding: 0; }
+  .map-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .map-copy { padding: 100px 64px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .map-copy h2 { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+  .map-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.25rem); text-transform: uppercase; color: var(--navy); }
+  .map-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.25rem, 4vw, 4rem); line-height: 0.96; letter-spacing: -0.005em; color: var(--navy); }
+  .map-p { margin: 0; max-width: 460px; font-family: var(--font-serif); font-size: 17px; line-height: 1.78; letter-spacing: 0.04em; color: var(--navy); text-align: justify; hyphens: auto; }
+  .map-visual { min-height: 480px; background: var(--navy); color: var(--white); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .map-visual svg.grid { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.18; }
+  .map-marker { position: relative; display: flex; flex-direction: column; align-items: center; gap: 14px; color: var(--white); }
+  .map-marker .name { font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: 28px; line-height: 1; letter-spacing: -0.01em; }
+  .map-marker .cap { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.30em; text-transform: uppercase; color: rgba(255,255,255,0.78); text-align: center; max-width: 280px; }
+  @media (max-width: 880px) {
+    .map-grid { grid-template-columns: 1fr; }
+    .map-copy { padding: 80px 32px; }
+  }
+</style>
+</head>
+<body>
+  <div id="nav-root" data-current="contacto"></div>
+
+  <main>
+    <section>
+      <div class="ph-photo">
+        <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina19.jpg" alt="">
+      </div>
+      <div class="ph-text">
+        <div class="ph-inner">
+          <div data-ornament data-w="320"></div>
+          <h1>
+            <span class="ph-caps" data-i18n="ph.caps">ESTAMOS A SU</span>
+            <span class="ph-italic" data-i18n="ph.italic">servicio</span>
+          </h1>
+          <p class="ph-intro" data-i18n="ph.intro">Para empezar a diseñar su celebración, escríbanos. Para eventos en los próximos treinta días, le sugerimos contactarnos directamente por teléfono.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="reveal">
+      <section class="form-sec">
+        <div class="form-wrap">
+          <div class="contact-grid">
+            <div class="addr">
+              <div class="addr-block">
+                <div class="addr-label" data-i18n="a.head">Casa central</div>
+                <div class="addr-lead">Jardines del Pedregal</div>
+                <div class="addr-text" data-i18n="a.addr">Av. Zacatepetl No. 154<br>C.P. 04530 · Ciudad de México</div>
+              </div>
+              <div class="addr-block">
+                <div class="addr-label" data-i18n="a.res">Reservas y cotizaciones</div>
+                <a href="tel:5556619831" class="addr-lead">55 56 61 98 31</a>
+                <a href="mailto:contacto@kohlmann.com.mx" class="addr-mail">contacto@kohlmann.com.mx</a>
+              </div>
+              <div class="addr-block">
+                <div class="addr-label" data-i18n="a.hours">Horario de oficina</div>
+                <div class="addr-text" data-i18n="a.hoursv">Lunes a viernes · 9:00 — 18:00<br>Sábados · 10:00 — 14:00</div>
+              </div>
+              <div class="addr-block">
+                <div class="addr-label" data-i18n="a.resp">Tiempo de respuesta</div>
+                <div class="addr-text" data-i18n="a.respv">Solicitudes en línea respondidas en 48 horas hábiles. Para eventos en los próximos 30 días, le sugerimos llamar.</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="form-head">
+                <div data-ornament data-w="180"></div>
+                <h2>
+                  <span class="form-caps" data-i18n="f.caps">SOLICITAR</span>
+                  <span class="form-italic" data-i18n="f.italic">cotización</span>
+                </h2>
+                <p class="form-sub" data-i18n="f.sub">Cuéntenos sobre su celebración. Le responderemos en un plazo de 48 horas hábiles con una propuesta inicial.</p>
+              </div>
+
+              <form class="quote-form" id="quoteForm">
+                <label class="qf-field"><span class="qf-label" data-i18n="f.name">Nombre</span><input class="qf-input" required></label>
+                <label class="qf-field"><span class="qf-label" data-i18n="f.last">Apellidos</span><input class="qf-input" required></label>
+                <label class="qf-field"><span class="qf-label" data-i18n="f.tel">Teléfono</span><input class="qf-input" type="tel" required placeholder="55 5661 9831"></label>
+                <label class="qf-field"><span class="qf-label" data-i18n="f.email">Correo electrónico</span><input class="qf-input" type="email" required placeholder="nombre@correo.com"></label>
+                <label class="qf-field"><span class="qf-label" data-i18n="f.date">Fecha del evento</span><input class="qf-input" type="date"></label>
+                <label class="qf-field"><span class="qf-label" data-i18n="f.guests">Número de invitados</span><input class="qf-input" type="number" min="1" placeholder="120"></label>
+                <label class="qf-field span2"><span class="qf-label" data-i18n="f.loc">Locación del evento</span><input class="qf-input" placeholder="Jardín, hacienda, salón…"></label>
+                <label class="qf-field"><span class="qf-label" data-i18n="f.svc">Tipo de servicio</span>
+                  <select class="qf-select">
+                    <option value="" data-i18n="f.select">Seleccionar</option>
+                    <option data-i18n="f.svc1">Coffee break</option><option data-i18n="f.svc2">Desayuno</option><option data-i18n="f.svc3">Brunch</option><option data-i18n="f.svc4">Comida</option><option data-i18n="f.svc5">Coctel</option><option data-i18n="f.svc6">Cena</option><option data-i18n="f.svc7">Buffet</option><option data-i18n="f.other">Otro</option>
+                  </select>
+                </label>
+                <label class="qf-field"><span class="qf-label" data-i18n="f.evt">Tipo de evento</span>
+                  <select class="qf-select">
+                    <option value="" data-i18n="f.select">Seleccionar</option>
+                    <option data-i18n="f.evt1">Boda</option><option data-i18n="f.evt2">XV años</option><option data-i18n="f.evt3">Bautizo</option><option data-i18n="f.evt4">Primera comunión</option><option data-i18n="f.evt5">Cumpleaños</option><option data-i18n="f.evt6">Graduación</option><option data-i18n="f.evt7">Empresarial</option><option data-i18n="f.other">Otro</option>
+                  </select>
+                </label>
+                <label class="qf-field span2"><span class="qf-label" data-i18n="f.comments">Comentarios</span><textarea class="qf-textarea" rows="3" placeholder="Cuéntanos sobre tu celebración…"></textarea></label>
+                <div class="qf-actions">
+                  <button type="submit" class="btn btn-fill-dark" data-i18n="f.submit">Solicitar cotización</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="map">
+        <div class="map-grid">
+          <div class="map-copy">
+            <div data-ornament data-w="200"></div>
+            <h2>
+              <span class="map-caps" data-i18n="m.caps">NUESTRA</span>
+              <span class="map-italic" data-i18n="m.italic">casa</span>
+            </h2>
+            <p class="map-p" data-i18n="m.p">La cocina central de Kohlmann se encuentra en Jardines del Pedregal, al sur de la Ciudad de México. Recibimos visitas con cita previa para degustaciones, cataciones de vino y reuniones de planeación.</p>
+            <a href="https://maps.google.com/?q=Av.+Zacatepetl+154,+Jardines+del+Pedregal,+CDMX" target="_blank" rel="noopener" class="btn btn-outline-dark" style="align-self:flex-start" data-i18n="m.btn">Ver en Google Maps</a>
+          </div>
+          <div class="map-visual">
+            <svg class="grid" viewBox="0 0 400 300" preserveAspectRatio="none" id="mapGrid"></svg>
+            <div class="map-marker">
+              <svg width="22" height="22" viewBox="0 0 24 24">
+                <g transform="translate(12, 12)">
+                  <path d="M 0 -10 C 4 -4 4 -4 10 0 C 4 4 4 4 0 10 C -4 4 -4 4 -10 0 C -4 -4 -4 -4 0 -10 Z" fill="white"/>
+                  <circle cx="0" cy="0" r="2.2" fill="var(--navy)"/>
+                </g>
+              </svg>
+              <div class="name">Kohlmann</div>
+              <div class="cap">AV. ZACATEPETL 154 · JARDINES DEL PEDREGAL</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+  <script>
+    window.I18N_EN = {
+      "ph.caps": "WE ARE AT YOUR",
+      "ph.italic": "service",
+      "ph.intro": "To begin designing your celebration, write to us. For events within the next thirty days, we suggest contacting us directly by phone.",
+      "a.head": "Head office",
+      "a.addr": "Av. Zacatepetl No. 154<br>C.P. 04530 · Mexico City",
+      "a.res": "Reservations & quotes",
+      "a.hours": "Office hours",
+      "a.hoursv": "Monday to Friday · 9:00 — 18:00<br>Saturdays · 10:00 — 14:00",
+      "a.resp": "Response time",
+      "a.respv": "Online requests answered within 48 working hours. For events within the next 30 days, we suggest calling.",
+      "f.caps": "REQUEST A",
+      "f.italic": "quote",
+      "f.sub": "Tell us about your celebration. We will respond within 48 working hours with an initial proposal.",
+      "f.name": "First name",
+      "f.last": "Surname",
+      "f.tel": "Phone",
+      "f.email": "Email",
+      "f.date": "Event date",
+      "f.guests": "Number of guests",
+      "f.loc": "Event location",
+      "f.svc": "Type of service",
+      "f.evt": "Type of event",
+      "f.comments": "Comments",
+      "f.select": "Select",
+      "f.other": "Other",
+      "f.svc1": "Coffee break", "f.svc2": "Breakfast", "f.svc3": "Brunch", "f.svc4": "Lunch",
+      "f.svc5": "Cocktail", "f.svc6": "Dinner", "f.svc7": "Buffet",
+      "f.evt1": "Wedding", "f.evt2": "XV años", "f.evt3": "Christening", "f.evt4": "First communion",
+      "f.evt5": "Birthday", "f.evt6": "Graduation", "f.evt7": "Corporate",
+      "f.submit": "Request a quote",
+      "m.caps": "OUR",
+      "m.italic": "house",
+      "m.p": "Kohlmann's central kitchen is located in Jardines del Pedregal, in the south of Mexico City. We receive visits by appointment for tastings, wine pairings and planning meetings.",
+      "m.btn": "View on Google Maps"
+    };
+    window.I18N_THANKS = {
+      es: { h: "gracias", p: "Hemos recibido tu solicitud. Un miembro del equipo de Kohlmann se pondrá en contacto contigo en las próximas 48 horas para discutir los detalles de tu celebración." },
+      en: { h: "thank you", p: "We have received your request. A member of the Kohlmann team will contact you within the next 48 hours to discuss the details of your celebration." }
+    };
+  </script>
+  <script src="shared.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("quoteForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var lang = (window.Kohlmann && window.Kohlmann.getLang) ? window.Kohlmann.getLang() : "es";
+        var txt = window.I18N_THANKS[lang] || window.I18N_THANKS.es;
+        var wrap = document.createElement("div");
+        wrap.className = "qf-thanks";
+        wrap.innerHTML =
+          (window.Kohlmann ? window.Kohlmann.ornamentSVG(200, "var(--navy)") : "") +
+          '<h3>' + txt.h + '</h3><p>' + txt.p + '</p>';
+        form.replaceWith(wrap);
+      });
+
+      var g = document.getElementById("mapGrid");
+      var ns = "http://www.w3.org/2000/svg";
+      function line(x1, y1, x2, y2, w) {
+        var l = document.createElementNS(ns, "line");
+        l.setAttribute("x1", x1); l.setAttribute("y1", y1);
+        l.setAttribute("x2", x2); l.setAttribute("y2", y2);
+        l.setAttribute("stroke", "white"); l.setAttribute("stroke-width", w);
+        g.appendChild(l);
+      }
+      for (var i = 0; i < 16; i++) line(i * 25, 0, i * 25, 300, 0.5);
+      for (var j = 0; j < 12; j++) line(0, j * 25, 400, j * 25, 0.5);
+      line(0, 100, 400, 80, 1.2);
+      line(0, 220, 400, 180, 1.2);
+      line(120, 0, 180, 300, 1.2);
+      line(280, 0, 320, 300, 1.2);
+    })();
+  </script>
+</body>
+</html>

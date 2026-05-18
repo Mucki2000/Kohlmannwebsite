@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Servicios · Kohlmann Banquetes</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .svc { padding: 120px 24px; background: var(--cream); }
+  .svc-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .svc-grid.reverse { direction: rtl; }
+  .svc-grid.reverse > * { direction: ltr; }
+  .svc-photo { height: 100%; min-height: 420px; overflow: hidden; background: var(--navy-deep); }
+  .svc-photo img { width: 100%; height: 100%; object-fit: cover; filter: var(--image-filter); display: block; }
+  .svc-text { max-width: 540px; display: flex; flex-direction: column; gap: 24px; }
+  .svc-text h2 { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+  .svc-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.75rem, 3.4vw, 3rem); line-height: 1.05; text-transform: uppercase; color: var(--navy); }
+  .svc-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.25rem, 4.4vw, 4.25rem); line-height: 0.96; letter-spacing: -0.005em; color: var(--navy); }
+  .svc-body { font-family: var(--font-serif); font-size: 17.5px; line-height: 1.78; letter-spacing: 0.04em; color: var(--navy); text-align: justify; hyphens: auto; }
+  .svc-items { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .svc-items li { display: flex; align-items: baseline; gap: 12px; font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--navy); }
+  .svc-items li::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--navy); transform: rotate(45deg); flex-shrink: 0; position: relative; top: 1px; }
+  @media (max-width: 880px) {
+    .svc-grid, .svc-grid.reverse { grid-template-columns: 1fr !important; direction: ltr !important; gap: 40px !important; }
+    .svc-photo { min-height: 320px; }
+  }
+
+  .svc-cta { background: var(--navy); color: var(--white); padding: 140px 24px; }
+  .svc-cta-inner { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
+  .svc-cta-inner h2 { margin: 0; display: flex; flex-direction: column; align-items: center; }
+  .svc-cta-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.8vw, 2.5rem); line-height: 1.1; text-transform: uppercase; color: var(--white); }
+  .svc-cta-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.25rem, 4vw, 4rem); line-height: 0.96; letter-spacing: -0.01em; color: var(--white); }
+  .svc-cta-p { margin: 0; max-width: 460px; font-family: var(--font-serif); font-size: 17px; line-height: 1.72; letter-spacing: 0.04em; color: rgba(255,255,255,0.82); }
+</style>
+</head>
+<body>
+  <div id="nav-root" data-current="servicios"></div>
+
+  <main>
+    <section>
+      <div class="ph-photo">
+        <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina5.jpg" alt="">
+      </div>
+      <div class="ph-text">
+        <div class="ph-inner">
+          <div data-ornament data-w="320"></div>
+          <h1>
+            <span class="ph-caps" data-i18n="ph.caps">CELEBRACIONES</span>
+            <span class="ph-italic" data-i18n="ph.italic">a la medida</span>
+          </h1>
+          <p class="ph-intro" data-i18n="ph.intro">Cada formato de evento pide una conversación distinta. Estos son los cuatro grandes ejes sobre los que trabajamos — todos personalizables, todos coordinados de extremo a extremo por un solo equipo dedicado.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="reveal">
+      <section class="svc">
+        <div class="svc-grid">
+          <div class="svc-photo"><img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina30.jpg" alt=""></div>
+          <div class="svc-text">
+            <div data-ornament data-w="180"></div>
+            <h2><span class="svc-caps" data-i18n="s1.caps">BODAS</span><span class="svc-italic" data-i18n="s1.italic">&amp; enlaces</span></h2>
+            <div class="svc-body">
+              <p style="margin:0" data-i18n="s1.p1">El día de su boda es, probablemente, el evento más detallado que organizará en su vida. Nuestro trabajo es que usted no lo note. Asumimos la logística del banquete completo — desde la coctelería de bienvenida hasta el descorche final — para que su atención esté donde debe estar.</p>
+              <p style="margin:16px 0 0" data-i18n="s1.p2">Servimos bodas civiles, religiosas, judías y de tradiciones mixtas. Coordinamos con su wedding planner o asumimos la coordinación íntegra del banquete cuando se requiere.</p>
+            </div>
+            <ul class="svc-items">
+              <li data-i18n="s1.i1">Coctelería de bienvenida</li><li data-i18n="s1.i2">Banquete plaqué o emplatado</li><li data-i18n="s1.i3">Mesa de quesos y postres</li><li data-i18n="s1.i4">Servicio de bar premium</li><li data-i18n="s1.i5">Personal capacitado, 1:8 invitados</li><li data-i18n="s1.i6">Mantelería y vajilla propia</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="svc">
+        <div class="svc-grid reverse">
+          <div class="svc-photo"><img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina19.jpg" alt=""></div>
+          <div class="svc-text">
+            <div data-ornament data-w="180"></div>
+            <h2><span class="svc-caps" data-i18n="s2.caps">XV AÑOS &amp;</span><span class="svc-italic" data-i18n="s2.italic">rituales familiares</span></h2>
+            <div class="svc-body">
+              <p style="margin:0" data-i18n="s2.p1">Las celebraciones que marcan el paso del tiempo — quince años, bautizos, primeras comuniones, confirmaciones — son las que más invitados de generaciones distintas reúnen en una sola mesa. Eso pide un servicio capaz de leer al niño y al abuelo en la misma noche.</p>
+              <p style="margin:16px 0 0" data-i18n="s2.p2">Trabajamos con menús que conversan con ambos extremos del salón: clásicos reconocibles para los mayores, sorpresas técnicas para quienes esperan algo nuevo.</p>
+            </div>
+            <ul class="svc-items">
+              <li data-i18n="s2.i1">Menú adaptado por rango de edad</li><li data-i18n="s2.i2">Estaciones interactivas opcionales</li><li data-i18n="s2.i3">DJ y música en vivo coordinados</li><li data-i18n="s2.i4">Coordinación con foto y video</li><li data-i18n="s2.i5">Pastel y mesa de dulces</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="svc">
+        <div class="svc-grid">
+          <div class="svc-photo"><img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina15.jpg" alt=""></div>
+          <div class="svc-text">
+            <div data-ornament data-w="180"></div>
+            <h2><span class="svc-caps" data-i18n="s3.caps">CENAS</span><span class="svc-italic" data-i18n="s3.italic">empresariales</span></h2>
+            <div class="svc-body">
+              <p style="margin:0" data-i18n="s3.p1">Hemos atendido cenas oficiales, recepciones diplomáticas, presentaciones de producto y juntas de consejo. El común denominador es la discreción: el servicio se siente impecable sin que llame la atención sobre sí mismo.</p>
+              <p style="margin:16px 0 0" data-i18n="s3.p2">Ofrecemos también opciones híbridas para eventos corporativos extendidos — coffee breaks, comidas de trabajo y cierres de coctel — bajo una sola coordinación.</p>
+            </div>
+            <ul class="svc-items">
+              <li data-i18n="s3.i1">Coordinación corporativa dedicada</li><li data-i18n="s3.i2">Menús ejecutivos en formato ágil</li><li data-i18n="s3.i3">Servicio bilingüe (ES / EN)</li><li data-i18n="s3.i4">Confidencialidad y discreción</li><li data-i18n="s3.i5">Facturación corporativa</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="svc">
+        <div class="svc-grid reverse">
+          <div class="svc-photo"><img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina5.jpg" alt=""></div>
+          <div class="svc-text">
+            <div data-ornament data-w="180"></div>
+            <h2><span class="svc-caps" data-i18n="s4.caps">GRADUACIONES &amp;</span><span class="svc-italic" data-i18n="s4.italic">celebraciones íntimas</span></h2>
+            <div class="svc-body">
+              <p style="margin:0" data-i18n="s4.p1">Graduaciones, cumpleaños emblemáticos, aniversarios — celebraciones donde el grupo de invitados es más pequeño pero la mesa no por eso es menos importante. Para estos formatos, sugerimos comidas largas, vinos seleccionados, y un equipo de servicio reducido pero altamente entrenado.</p>
+              <p style="margin:16px 0 0" data-i18n="s4.p2">Trabajamos lo mismo en restaurantes propios del anfitrión que en residencias particulares.</p>
+            </div>
+            <ul class="svc-items">
+              <li data-i18n="s4.i1">Mínimo 12 comensales</li><li data-i18n="s4.i2">Servicio de chef en residencia opcional</li><li data-i18n="s4.i3">Maridaje de vinos curado</li><li data-i18n="s4.i4">Menú degustación de seis tiempos</li><li data-i18n="s4.i5">Servicio de sobremesa extendida</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="svc-cta">
+        <div class="svc-cta-inner">
+          <div data-ornament data-w="240" data-c="var(--white)"></div>
+          <h2>
+            <span class="svc-cta-caps" data-i18n="cta.caps">¿NO ENCUENTRA SU</span>
+            <span class="svc-cta-italic" data-i18n="cta.italic">celebración?</span>
+          </h2>
+          <p class="svc-cta-p" data-i18n="cta.p">Trabajamos también formatos a la medida — desde brunches familiares hasta recepciones diplomáticas. Cuéntenos lo que tiene en mente.</p>
+          <a href="contacto.html" class="btn btn-outline-light" data-i18n="cta.quote">Solicitar cotización</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+  <script>
+    window.I18N_EN = {
+      "ph.caps": "CELEBRATIONS",
+      "ph.italic": "made to measure",
+      "ph.intro": "Every event format calls for a different conversation. These are the four broad axes we work along — all customisable, all coordinated end to end by a single dedicated team.",
+      "s1.caps": "WEDDINGS",
+      "s1.italic": "&amp; unions",
+      "s1.p1": "Your wedding day is, probably, the most detailed event you will organise in your life. Our job is for you not to notice it. We take on the logistics of the complete banquet — from the welcome cocktail to the final pour — so that your attention is where it should be.",
+      "s1.p2": "We serve civil, religious, Jewish and mixed-tradition weddings. We coordinate with your wedding planner or assume full coordination of the banquet when required.",
+      "s1.i1": "Welcome cocktail service",
+      "s1.i2": "Plated or platter banquet",
+      "s1.i3": "Cheese and dessert table",
+      "s1.i4": "Premium bar service",
+      "s1.i5": "Trained staff, 1:8 guests",
+      "s1.i6": "In-house linen and tableware",
+      "s2.caps": "XV AÑOS &amp;",
+      "s2.italic": "family rituals",
+      "s2.p1": "The celebrations that mark the passing of time — fifteenth birthdays, christenings, first communions, confirmations — are the ones that bring the most guests from different generations to a single table. That calls for a service able to read the child and the grandparent on the same night.",
+      "s2.p2": "We work with menus that converse with both ends of the room: recognisable classics for the elders, technical surprises for those expecting something new.",
+      "s2.i1": "Menu adapted by age range",
+      "s2.i2": "Optional interactive stations",
+      "s2.i3": "Coordinated DJ and live music",
+      "s2.i4": "Photo and video coordination",
+      "s2.i5": "Cake and sweets table",
+      "s3.caps": "CORPORATE",
+      "s3.italic": "dinners",
+      "s3.p1": "We have served official dinners, diplomatic receptions, product launches and board meetings. The common denominator is discretion: the service feels impeccable without drawing attention to itself.",
+      "s3.p2": "We also offer hybrid options for extended corporate events — coffee breaks, working lunches and cocktail closings — under a single coordination.",
+      "s3.i1": "Dedicated corporate coordination",
+      "s3.i2": "Executive menus in an agile format",
+      "s3.i3": "Bilingual service (ES / EN)",
+      "s3.i4": "Confidentiality and discretion",
+      "s3.i5": "Corporate invoicing",
+      "s4.caps": "GRADUATIONS &amp;",
+      "s4.italic": "intimate celebrations",
+      "s4.p1": "Graduations, milestone birthdays, anniversaries — celebrations where the group of guests is smaller but the table is no less important for it. For these formats, we suggest long meals, selected wines, and a reduced but highly trained service team.",
+      "s4.p2": "We work just as well in the host's own restaurants as in private residences.",
+      "s4.i1": "Minimum 12 guests",
+      "s4.i2": "Optional in-residence chef service",
+      "s4.i3": "Curated wine pairing",
+      "s4.i4": "Six-course tasting menu",
+      "s4.i5": "Extended after-dinner service",
+      "cta.caps": "CAN'T FIND YOUR",
+      "cta.italic": "celebration?",
+      "cta.p": "We also work bespoke formats — from family brunches to diplomatic receptions. Tell us what you have in mind.",
+      "cta.quote": "Request a quote"
+    };
+  </script>
+  <script src="shared.js"></script>
+</body>
+</html>

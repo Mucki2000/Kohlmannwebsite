@@ -1,0 +1,399 @@
+/* ============================================================
+   Kohlmann Design System — Tokens + Semantic Vars
+   Style direction: San Ángel Inn — DEEP NAVY · CREAM · WHITE
+   Photography is B&W. Headings are display serif throughout.
+   ============================================================ */
+
+/* Webfonts — Google Fonts (closest free match for SAI display serif).
+   Cormorant Garamond for display + body. Jost for nav/labels.
+   If you have the original font files, drop them in /fonts and
+   replace this @import with @font-face. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  /* ---------- Color: navy / primary ---------- */
+  --navy:         #1F2D70;   /* primary — page bar, headlines, body text */
+  --navy-deep:    #161F50;   /* hover / press */
+  --navy-soft:    #2B3A85;   /* alt for inline highlights */
+  --navy-80:      rgba(31,45,112,.80);
+  --navy-60:      rgba(31,45,112,.60);
+  --navy-40:      rgba(31,45,112,.40);
+  --navy-25:      rgba(31,45,112,.25);
+  --navy-15:      rgba(31,45,112,.15);
+  --navy-08:      rgba(31,45,112,.08);
+
+  /* ---------- Color: paper / surface ---------- */
+  --cream:        #F0EBDC;   /* primary content surface */
+  --cream-warm:   #E9E2CE;   /* one step deeper for sections */
+  --cream-deep:   #DFD6BE;   /* card / quote-form surface */
+  --white:        #FFFFFF;
+
+  /* ---------- Color: image treatment ---------- */
+  --image-filter: grayscale(1) contrast(1.05) brightness(0.98);
+
+  /* ---------- Color: legacy aliases (kept for back-compat) ---------- */
+  --paper:        var(--cream);
+  --paper-warm:   var(--cream-warm);
+  --paper-deep:   var(--cream-deep);
+  --paper-edge:   #D2C7AB;
+  --ink:          var(--navy);
+  --ink-80:       var(--navy-80);
+  --ink-60:       var(--navy-60);
+  --ink-40:       var(--navy-40);
+  --ink-30:       var(--navy-25);
+  --ink-25:       var(--navy-25);
+  --ink-15:       var(--navy-15);
+  --ink-08:       var(--navy-08);
+  --clay:         #B45945;   /* secondary accent only */
+  --clay-deep:    #883E2E;
+  --brass:        #B6975D;
+  --brass-light:  #D7BE8E;
+
+  /* ---------- Color: semantic ---------- */
+  --color-bg:              var(--cream);
+  --color-bg-deep:         var(--navy);
+  --color-bg-elevated:     var(--cream-warm);
+  --color-fg:              var(--navy);
+  --color-fg-on-navy:      var(--white);
+  --color-fg-on-navy-soft: rgba(255,255,255,.72);
+  --color-fg-muted:        var(--navy-60);
+  --color-fg-soft:         var(--navy-40);
+  --color-border:          var(--navy-15);
+  --color-border-on-navy:  rgba(255,255,255,.40);
+  --color-accent:          var(--navy);
+  --color-link:            var(--navy);
+  --color-link-hover:      var(--navy-deep);
+
+  /* ---------- Type: families ---------- */
+  --font-serif:    "Cormorant Garamond", "EB Garamond", "Cormorant", Georgia, serif;
+  --font-sans:     "Jost", "Inter", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono:     "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
+
+  /* ---------- Type: base sizing ---------- */
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --fs-17: 1.0625rem;
+  --fs-19: 1.1875rem;
+  --fs-22: 1.375rem;
+  --fs-26: 1.625rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-52: 3.25rem;
+  --fs-68: 4.25rem;
+  --fs-88: 5.5rem;
+  --fs-112: 7rem;
+  --fs-140: 8.75rem;
+
+  /* tracking */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.06em;
+  --tracking-wider:   0.18em;   /* nav, eyebrows */
+  --tracking-widest:  0.30em;   /* RESERVAS button, ES/EN */
+  --tracking-body:    0.04em;   /* justified body */
+
+  /* line-height */
+  --lh-tight:   1.02;
+  --lh-snug:    1.12;
+  --lh-normal:  1.55;
+  --lh-loose:   1.72;
+
+  /* ---------- Spacing (4px base) ---------- */
+  --space-0:   0;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-8:   48px;
+  --space-10:  64px;
+  --space-12:  80px;
+  --space-16:  96px;
+  --space-20:  120px;
+  --space-24:  144px;
+  --space-32:  192px;
+  --space-40:  240px;
+
+  /* ---------- Corner radii ---------- */
+  --radius-0:    0;
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-none:    none;
+  --shadow-float:   0 14px 32px -18px rgba(22,31,80,.35);
+  --shadow-modal:   0 24px 80px -32px rgba(22,31,80,.45);
+
+  /* ---------- Motion ---------- */
+  --ease-out:   cubic-bezier(.22,.61,.36,1);
+  --ease-soft:  cubic-bezier(.4,0,.2,1);
+  --dur-fast:   180ms;
+  --dur-base:   320ms;
+  --dur-slow:   600ms;
+  --dur-stage:  700ms;
+
+  /* ---------- Layout ---------- */
+  --measure:    560px;
+  --container:  1280px;
+  --container-narrow: 960px;
+  --nav-h:      180px;        /* SAI nav is TALL — wordmark row + links row */
+  --nav-h-row1: 110px;
+  --nav-h-row2: 70px;
+}
+
+/* ===========================================================
+   Base
+   =========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-serif);
+  font-size: var(--fs-17);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--navy-25); color: var(--navy); }
+
+/* ===========================================================
+   Semantic typography
+   The SAI heading is ALL ONE FAMILY — display serif. Caps and
+   italic lowercase use the same font, just different cases.
+   Sans (Jost) is reserved for NAV LINKS and small LABELS.
+   =========================================================== */
+
+/* Display Caps — large all-caps serif, navy */
+.t-display-caps {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(2.75rem, 7vw, var(--fs-112));
+  letter-spacing: 0.005em;
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* Display Italic — large italic lowercase serif, navy */
+.t-display-italic {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(2.75rem, 7vw, var(--fs-112));
+  letter-spacing: -0.005em;
+  line-height: var(--lh-snug);
+  color: var(--navy);
+  margin: 0;
+}
+
+/* H1/H2/H3 — smaller serif headings */
+.t-h1 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(2.25rem, 4.4vw, var(--fs-68)); line-height: var(--lh-snug); color: var(--navy); margin: 0; }
+.t-h2 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.75rem, 3.2vw, var(--fs-40)); line-height: var(--lh-snug); color: var(--navy); margin: 0; }
+.t-h3 { font-family: var(--font-serif); font-weight: 500; font-size: var(--fs-22); line-height: var(--lh-snug); color: var(--navy); margin: 0; }
+
+/* Body — serif, justified-friendly, tracked */
+.t-body {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-17);
+  line-height: var(--lh-loose);
+  letter-spacing: var(--tracking-body);
+  color: var(--navy);
+  max-width: var(--measure);
+}
+.t-body-lg {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-19);
+  line-height: var(--lh-loose);
+  letter-spacing: var(--tracking-body);
+  color: var(--navy);
+  max-width: var(--measure);
+}
+.t-body-justified { text-align: justify; hyphens: auto; }
+
+/* Nav link — Jost tracked caps */
+.t-nav {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* Eyebrow — same Jost in caps (used for small labels, not big headings) */
+.t-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* Small */
+.t-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-13);
+  letter-spacing: var(--tracking-wide);
+  color: var(--navy-60);
+}
+
+/* ===========================================================
+   The signature SAI heading pattern
+   "UN LUGAR PARA MUDAR DE
+    temperamento"
+   Both are serif; uppercase line + italic-lowercase line.
+   =========================================================== */
+.heading-sai {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+}
+.heading-sai .caps {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(2.5rem, 6.4vw, 6.5rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.heading-sai .italic {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(2.75rem, 7vw, 7.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.005em;
+  color: var(--navy);
+  margin-top: 0.05em;
+}
+
+/* ===========================================================
+   Buttons — RESERVAS-style: white outline pill on navy
+   plus secondary navy-fill on cream
+   =========================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color var(--dur-base) var(--ease-soft),
+    color var(--dur-base) var(--ease-soft),
+    border-color var(--dur-base) var(--ease-soft);
+}
+
+/* On-navy: white outline → fills white on hover, navy text */
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+.btn-outline-light:hover { background: var(--white); color: var(--navy); }
+
+/* On-cream: navy outline → fills navy on hover, white text */
+.btn-outline-dark {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+.btn-outline-dark:hover { background: var(--navy); color: var(--white); }
+
+/* Navy fill (primary CTA when not in nav) */
+.btn-fill-dark {
+  background: var(--navy);
+  color: var(--white);
+  border: 1px solid var(--navy);
+}
+.btn-fill-dark:hover { background: var(--navy-deep); border-color: var(--navy-deep); }
+
+/* ===========================================================
+   Inputs (underlined, no boxes)
+   =========================================================== */
+.field { display: flex; flex-direction: column; gap: var(--space-2); }
+.field-label {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--navy-60);
+}
+.field-input, .field-select, .field-textarea {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--navy-25);
+  padding: 10px 0;
+  font-family: var(--font-serif);
+  font-size: var(--fs-17);
+  color: var(--navy);
+  outline: none;
+  border-radius: 0;
+  width: 100%;
+}
+.field-input::placeholder { color: var(--navy-40); }
+.field-input:focus, .field-select:focus, .field-textarea:focus {
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 9px;
+}
+
+/* ===========================================================
+   Imagery — B&W treatment baked in via class
+   =========================================================== */
+.img-bw {
+  filter: var(--image-filter);
+  transition: filter var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+.img-bw:hover { filter: grayscale(1) contrast(1.08) brightness(1); }
+
+/* ===========================================================
+   Layout helpers
+   =========================================================== */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-6); }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 var(--space-6); }
+.measure { max-width: var(--measure); }
+.section { padding-block: var(--space-20); }
+.section-lg { padding-block: var(--space-32); }
+.surface-navy { background: var(--navy); color: var(--white); }
+.surface-cream { background: var(--cream); color: var(--navy); }
+
+/* Utilities */
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }
+.tracked { letter-spacing: var(--tracking-wider); }
+.center { text-align: center; }
+.justify { text-align: justify; hyphens: auto; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menú · Kohlmann Banquetes</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .cat { padding: 140px 24px; --fg: var(--navy); --muted: var(--navy-80); --rule: var(--navy-15); background: var(--cream); color: var(--navy); }
+  .cat.dark { background: var(--navy); color: var(--white); --fg: var(--white); --muted: rgba(255,255,255,0.78); --rule: rgba(255,255,255,0.20); }
+  .cat-wrap { max-width: 1100px; margin: 0 auto; }
+  .cat-head { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; margin-bottom: 80px; }
+  .cat-head h2 { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .cat-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(2rem, 4.2vw, 4.25rem); line-height: 1.05; text-transform: uppercase; color: var(--fg); }
+  .cat-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.5rem, 5.4vw, 5.5rem); line-height: 0.96; letter-spacing: -0.01em; color: var(--fg); }
+  .cat-desc { margin: 0; max-width: 520px; font-family: var(--font-serif); font-size: 17px; line-height: 1.72; letter-spacing: 0.04em; color: var(--muted); }
+  .cat-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 64px; max-width: 920px; margin: 0 auto; }
+  .cat-item { display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .cat-name { font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.2; color: var(--fg); }
+  .cat-note { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  @media (max-width: 720px) { .cat-cols { grid-template-columns: 1fr; } }
+
+  .types { background: var(--cream-warm); padding: 120px 24px; }
+  .types-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 48px; }
+  .types-head { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+  .types-head h2 { margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.25rem); text-transform: uppercase; color: var(--navy); }
+  .types-head p { margin: 0; max-width: 560px; font-family: var(--font-serif); font-size: 17px; line-height: 1.72; letter-spacing: 0.04em; color: var(--navy-80); }
+  .types-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; max-width: 800px; }
+  .types-list span { padding: 10px 22px; border: 1px solid var(--navy-25); font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--navy); }
+
+  .menu-cta { background: var(--cream); padding: 140px 24px; }
+  .menu-cta-inner { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
+  .menu-cta-inner h2 { margin: 0; display: flex; flex-direction: column; align-items: center; }
+  .menu-cta-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.8vw, 2.5rem); line-height: 1.1; text-transform: uppercase; color: var(--navy); }
+  .menu-cta-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.25rem, 4vw, 4rem); line-height: 0.96; letter-spacing: -0.01em; color: var(--navy); }
+  .menu-cta-p { margin: 0; max-width: 480px; font-family: var(--font-serif); font-size: 17px; line-height: 1.72; letter-spacing: 0.04em; color: var(--navy-80); }
+</style>
+</head>
+<body>
+  <div id="nav-root" data-current="menu"></div>
+
+  <main>
+    <section>
+      <div class="ph-photo">
+        <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina15.jpg" alt="">
+      </div>
+      <div class="ph-text">
+        <div class="ph-inner">
+          <div data-ornament data-w="320"></div>
+          <h1>
+            <span class="ph-caps" data-i18n="ph.caps">UNA CARTA DE</span>
+            <span class="ph-italic" data-i18n="ph.italic">autor</span>
+          </h1>
+          <p class="ph-intro" data-i18n="ph.intro">Nuestra cocina parte de la tradición mexicana — del huitlacoche y la flor de calabaza, del mole y el adobo — y dialoga con técnicas y productos de todo el mundo. Cada menú se ajusta al evento, la estación y los gustos del anfitrión. Lo que sigue es indicativo, no exhaustivo.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="reveal">
+      <section class="cat">
+        <div class="cat-wrap">
+          <div class="cat-head">
+            <div data-ornament data-w="260"></div>
+            <h2><span class="cat-caps" data-i18n="c1.caps">BOCADILLOS DE</span><span class="cat-italic" data-i18n="c1.italic">bienvenida</span></h2>
+            <p class="cat-desc" data-i18n="c1.desc">Servido durante la primera hora — frío, caliente y de elaboración propia. Selección sugerida de doce variedades por persona.</p>
+          </div>
+          <div class="cat-cols">
+            <div class="cat-item"><span class="cat-name" data-i18n="c1.1n">Tartaleta de tuétano y chile pasilla</span><span class="cat-note" data-i18n="c1.1d">Sobre masa de mantequilla, cebolla quemada</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c1.2n">Quesadilla de huitlacoche y flor de calabaza</span><span class="cat-note" data-i18n="c1.2d">Tortilla de maíz azul recién hecha</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c1.3n">Ostión a la veracruzana</span><span class="cat-note" data-i18n="c1.3d">Sobre concha, salsa fresca y limón</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c1.4n">Empanada de carnitas michoacanas</span><span class="cat-note" data-i18n="c1.4d">Masa al horno, salsa verde cruda</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c1.5n">Mini tostada de atún en tartar</span><span class="cat-note" data-i18n="c1.5d">Aguacate, chipotle, ajonjolí</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c1.6n">Brocheta de pulpo a las brasas</span><span class="cat-note" data-i18n="c1.6d">Aceite de oliva, paprika ahumada</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c1.7n">Crostini de queso de cabra y betabel</span><span class="cat-note" data-i18n="c1.7d">Reducción de balsámico, microhojas</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c1.8n">Mini gordita de chicharrón prensado</span><span class="cat-note" data-i18n="c1.8d">Salsa verde cruda, queso fresco</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="cat dark">
+        <div class="cat-wrap">
+          <div class="cat-head">
+            <div data-ornament data-w="260" data-c="var(--white)"></div>
+            <h2><span class="cat-caps" data-i18n="c2.caps">PLATILLOS</span><span class="cat-italic" data-i18n="c2.italic">principales</span></h2>
+            <p class="cat-desc" data-i18n="c2.desc">Elija entrada y plato fuerte. Servicio plaqué o emplatado individual, según el formato del evento.</p>
+          </div>
+          <div class="cat-cols">
+            <div class="cat-item"><span class="cat-name" data-i18n="c2.1n">Sopa de tortilla en su versión clásica</span><span class="cat-note" data-i18n="c2.1d">Pasilla, aguacate, queso fresco, crema</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c2.2n">Ensalada de berros, jícama y granada</span><span class="cat-note" data-i18n="c2.2d">Aderezo de chipotle suave y miel de agave</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c2.3n">Filete de res en chiles capones</span><span class="cat-note" data-i18n="c2.3d">Salsa de pasilla mixe, puré rústico de papa</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c2.4n">Pesca del día al horno de leña</span><span class="cat-note" data-i18n="c2.4d">Mantequilla de hierbas, espárragos baby</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c2.5n">Pato confitado al mole almendrado</span><span class="cat-note" data-i18n="c2.5d">Pera asada, polenta cremosa</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c2.6n">Risotto de huitlacoche</span><span class="cat-note" data-i18n="c2.6d">Parmesano de 24 meses, aceite de epazote</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c2.7n">Lomo de cordero en costra de pistache</span><span class="cat-note" data-i18n="c2.7d">Hueso de res, demi-glace de Jerez</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c2.8n">Lasaña de calabacita y queso de cabra</span><span class="cat-note" data-i18n="c2.8d">Opción vegetariana — bechamel ligero</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="cat">
+        <div class="cat-wrap">
+          <div class="cat-head">
+            <div data-ornament data-w="260"></div>
+            <h2><span class="cat-caps" data-i18n="c3.caps">MESA DE</span><span class="cat-italic" data-i18n="c3.italic">postres</span></h2>
+            <p class="cat-desc" data-i18n="c3.desc">Servida sobre mantelería propia, en presentación buffet o emplatada individualmente al cierre del banquete.</p>
+          </div>
+          <div class="cat-cols">
+            <div class="cat-item"><span class="cat-name" data-i18n="c3.1n">Soufflé tibio de chocolate Tabasco</span><span class="cat-note" data-i18n="c3.1d">Helado de vainilla de Papantla</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c3.2n">Pavlova de frutos rojos</span><span class="cat-note" data-i18n="c3.2d">Crema de mascarpone, menta fresca</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c3.3n">Crema catalana al mezcal</span><span class="cat-note" data-i18n="c3.3d">Caramelo de naranja amarga</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c3.4n">Pastel de elote y rompope</span><span class="cat-note" data-i18n="c3.4d">Receta de la casa desde 1972</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c3.5n">Mousse de mamey con guayaba</span><span class="cat-note" data-i18n="c3.5d">Galleta de almendra</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c3.6n">Selección de quesos artesanales</span><span class="cat-note" data-i18n="c3.6d">Mermeladas, nueces y fruta de temporada</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="cat dark">
+        <div class="cat-wrap">
+          <div class="cat-head">
+            <div data-ornament data-w="260" data-c="var(--white)"></div>
+            <h2><span class="cat-caps" data-i18n="c4.caps">SERVICIO DE</span><span class="cat-italic" data-i18n="c4.italic">bar</span></h2>
+            <p class="cat-desc" data-i18n="c4.desc">Bar abierto con barman dedicado durante toda la duración del evento. Posibilidad de coctelería de autor.</p>
+          </div>
+          <div class="cat-cols">
+            <div class="cat-item"><span class="cat-name" data-i18n="c4.1n">Mezcal de la casa</span><span class="cat-note" data-i18n="c4.1d">Tobalá, espadín y arroqueño · pequeño productor oaxaqueño</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c4.2n">Tequila Reserva</span><span class="cat-note" data-i18n="c4.2d">Selección 100% agave, blanco y reposado</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c4.3n">Vinos seleccionados</span><span class="cat-note" data-i18n="c4.3d">Bodegas mexicanas y francesas, blancos y tintos</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c4.4n">Coctelería de autor</span><span class="cat-note" data-i18n="c4.4d">Margarita ahumada · paloma de Jamaica · vermut casero</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c4.5n">Cervezas artesanales</span><span class="cat-note" data-i18n="c4.5d">Selección rotativa de cervecerías nacionales</span></div>
+            <div class="cat-item"><span class="cat-name" data-i18n="c4.6n">Café y digestivos</span><span class="cat-note" data-i18n="c4.6d">De grano mexicano · whiskies y cognac de gama alta</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="types">
+        <div class="types-inner">
+          <div class="types-head">
+            <div data-ornament data-w="220"></div>
+            <h2 data-i18n="types.h">FORMATOS DE SERVICIO</h2>
+            <p data-i18n="types.p">La carta se adapta al formato. Estos son los servicios estándar — todos con la posibilidad de personalización completa.</p>
+          </div>
+          <div class="types-list">
+            <span data-i18n="types.1">Coffee break</span><span data-i18n="types.2">Desayuno</span><span data-i18n="types.3">Brunch</span><span data-i18n="types.4">Comida</span><span data-i18n="types.5">Coctel</span><span data-i18n="types.6">Cena</span><span data-i18n="types.7">Buffet</span><span data-i18n="types.8">Mesa de postres</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="menu-cta">
+        <div class="menu-cta-inner">
+          <div data-ornament data-w="240"></div>
+          <h2>
+            <span class="menu-cta-caps" data-i18n="cta.caps">UN MENÚ A SU</span>
+            <span class="menu-cta-italic" data-i18n="cta.italic">medida</span>
+          </h2>
+          <p class="menu-cta-p" data-i18n="cta.p">La selección anterior es indicativa. Trabajamos cada menú en consulta con el anfitrión y nuestro equipo de chefs.</p>
+          <a href="contacto.html" class="btn btn-fill-dark" data-i18n="cta.quote">Solicitar cotización</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+  <script>
+    window.I18N_EN = {
+      "ph.caps": "A SIGNATURE",
+      "ph.italic": "menu",
+      "ph.intro": "Our cuisine departs from Mexican tradition — from huitlacoche and squash blossom, from mole and adobo — and converses with techniques and products from all over the world. Every menu is adjusted to the event, the season and the host's tastes. What follows is indicative, not exhaustive.",
+      "c1.caps": "WELCOME",
+      "c1.italic": "bites",
+      "c1.desc": "Served during the first hour — cold, hot and made in-house. Suggested selection of twelve varieties per person.",
+      "c1.1n": "Bone marrow and pasilla chilli tartlet", "c1.1d": "On buttered pastry, burnt onion",
+      "c1.2n": "Huitlacoche and squash blossom quesadilla", "c1.2d": "Freshly made blue corn tortilla",
+      "c1.3n": "Veracruz-style oyster", "c1.3d": "On the shell, fresh salsa and lime",
+      "c1.4n": "Michoacán carnitas empanada", "c1.4d": "Oven-baked dough, raw green salsa",
+      "c1.5n": "Mini tuna tartare tostada", "c1.5d": "Avocado, chipotle, sesame",
+      "c1.6n": "Grilled octopus skewer", "c1.6d": "Olive oil, smoked paprika",
+      "c1.7n": "Goat cheese and beetroot crostini", "c1.7d": "Balsamic reduction, micro-greens",
+      "c1.8n": "Mini pressed-chicharrón gordita", "c1.8d": "Raw green salsa, fresh cheese",
+      "c2.caps": "MAIN",
+      "c2.italic": "courses",
+      "c2.desc": "Choose a starter and a main course. Platter or individually plated service, depending on the event format.",
+      "c2.1n": "Classic tortilla soup", "c2.1d": "Pasilla, avocado, fresh cheese, cream",
+      "c2.2n": "Watercress, jícama and pomegranate salad", "c2.2d": "Mild chipotle and agave-honey dressing",
+      "c2.3n": "Beef fillet in chiles capones", "c2.3d": "Pasilla mixe sauce, rustic potato purée",
+      "c2.4n": "Catch of the day, wood-fired oven", "c2.4d": "Herb butter, baby asparagus",
+      "c2.5n": "Duck confit in almond mole", "c2.5d": "Roasted pear, creamy polenta",
+      "c2.6n": "Huitlacoche risotto", "c2.6d": "24-month parmesan, epazote oil",
+      "c2.7n": "Lamb loin in a pistachio crust", "c2.7d": "Beef jus, sherry demi-glace",
+      "c2.8n": "Courgette and goat cheese lasagne", "c2.8d": "Vegetarian option — light béchamel",
+      "c3.caps": "DESSERT",
+      "c3.italic": "table",
+      "c3.desc": "Served on our own linen, as a buffet presentation or plated individually at the close of the banquet.",
+      "c3.1n": "Warm Tabasco chocolate soufflé", "c3.1d": "Papantla vanilla ice cream",
+      "c3.2n": "Red-berry pavlova", "c3.2d": "Mascarpone cream, fresh mint",
+      "c3.3n": "Mezcal crema catalana", "c3.3d": "Bitter-orange caramel",
+      "c3.4n": "Corn and rompope cake", "c3.4d": "House recipe since 1972",
+      "c3.5n": "Mamey and guava mousse", "c3.5d": "Almond biscuit",
+      "c3.6n": "Selection of artisan cheeses", "c3.6d": "Jams, nuts and seasonal fruit",
+      "c4.caps": "BAR",
+      "c4.italic": "service",
+      "c4.desc": "Open bar with a dedicated bartender for the full duration of the event. Signature cocktails available.",
+      "c4.1n": "House mezcal", "c4.1d": "Tobalá, espadín and arroqueño · small Oaxacan producer",
+      "c4.2n": "Reserva Tequila", "c4.2d": "100% agave selection, blanco and reposado",
+      "c4.3n": "Selected wines", "c4.3d": "Mexican and French wineries, whites and reds",
+      "c4.4n": "Signature cocktails", "c4.4d": "Smoked margarita · hibiscus paloma · house vermouth",
+      "c4.5n": "Craft beers", "c4.5d": "Rotating selection of national breweries",
+      "c4.6n": "Coffee and digestifs", "c4.6d": "Mexican-bean coffee · high-end whiskies and cognac",
+      "types.h": "SERVICE FORMATS",
+      "types.p": "The menu adapts to the format. These are the standard services — all with the possibility of full customisation.",
+      "types.1": "Coffee break", "types.2": "Breakfast", "types.3": "Brunch", "types.4": "Lunch",
+      "types.5": "Cocktail", "types.6": "Dinner", "types.7": "Buffet", "types.8": "Dessert table",
+      "cta.caps": "A MENU TO YOUR",
+      "cta.italic": "measure",
+      "cta.p": "The selection above is indicative. We work each menu in consultation with the host and our team of chefs.",
+      "cta.quote": "Request a quote"
+    };
+  </script>
+  <script src="shared.js"></script>
+</body>
+</html>

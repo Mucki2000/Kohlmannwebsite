@@ -1,0 +1,7 @@
+# Only the Kohlmann website is tracked in this repo.
+# Everything else in this working folder (confidential business
+# documents, IDE config, etc.) is excluded by default.
+/*
+!/.gitignore
+!/colors_and_type.css
+!/website/

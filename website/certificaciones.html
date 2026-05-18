@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Certificaciones · Kohlmann Banquetes</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .cert { padding: 120px 24px; --fg: var(--navy); --muted: var(--navy-80); --rule: var(--navy-25); background: var(--cream); color: var(--navy); }
+  .cert.dark { background: var(--navy); color: var(--white); --fg: var(--white); --muted: rgba(255,255,255,0.78); --rule: rgba(255,255,255,0.30); }
+  .cert-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 80px; align-items: center; }
+  .cert-mark { display: flex; justify-content: center; }
+  .cert-mark img { max-width: 200px; max-height: 200px; object-fit: contain; filter: grayscale(1) contrast(1.05); }
+  .cert.dark .cert-mark img { filter: grayscale(1) brightness(0) invert(1) opacity(0.95); }
+  .cert-text { display: flex; flex-direction: column; gap: 24px; }
+  .cert-text h2 { margin: 0; display: flex; flex-direction: column; gap: 2px; }
+  .cert-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.4vw, 2.25rem); line-height: 1.1; text-transform: uppercase; color: var(--fg); }
+  .cert-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.25rem, 4vw, 4rem); line-height: 0.96; letter-spacing: -0.005em; color: var(--fg); }
+  .cert-meta { display: flex; gap: 32px; flex-wrap: wrap; padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+  .cert-meta-label { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--muted); }
+  .cert-meta-value { font-family: var(--font-serif); font-size: 17px; color: var(--fg); margin-top: 4px; }
+  .cert-body { font-family: var(--font-serif); font-size: 17px; line-height: 1.78; letter-spacing: 0.04em; color: var(--fg); text-align: justify; hyphens: auto; }
+  @media (max-width: 880px) { .cert-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }
+</style>
+</head>
+<body>
+  <div id="nav-root" data-current="certificaciones"></div>
+
+  <main>
+    <section>
+      <div class="ph-photo">
+        <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina15.jpg" alt="">
+      </div>
+      <div class="ph-text">
+        <div class="ph-inner">
+          <div data-ornament data-w="320"></div>
+          <h1>
+            <span class="ph-caps" data-i18n="ph.caps">CULTURA CULINARIA Y UN SABER-HACER</span>
+            <span class="ph-italic" data-i18n="ph.italic">excepcional</span>
+          </h1>
+          <p class="ph-intro" data-i18n="ph.intro">Cuatro distinciones respaldan la operación de la casa. Son requisitos formales — pero, más que eso, son una manera de obligarnos a sostener un nivel todos los días, no solamente en los eventos más importantes.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="reveal">
+      <section class="cert">
+        <div class="cert-grid">
+          <div class="cert-mark"><img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/H.png" alt="H"></div>
+          <div class="cert-text">
+            <div data-ornament data-w="180"></div>
+            <h2><span class="cert-caps" data-i18n="r1.caps">DISTINTIVO</span><span class="cert-italic" data-i18n="r1.italic">H</span></h2>
+            <div class="cert-meta">
+              <div><div class="cert-meta-label" data-i18n="lbl.issuer">Emisor</div><div class="cert-meta-value" data-i18n="r1.issuer">SECRETARÍA DE TURISMO</div></div>
+              <div><div class="cert-meta-label" data-i18n="lbl.status">Estado</div><div class="cert-meta-value" data-i18n="r1.status">Vigente</div></div>
+            </div>
+            <div class="cert-body">
+              <p style="margin:0" data-i18n="r1.p1">El Distintivo H es un reconocimiento que otorga la Secretaría de Turismo del Gobierno Federal a las empresas que cumplen con las disposiciones de buenas prácticas de higiene y sanidad establecidas en la NMX-F-605-NORMEX-2018.</p>
+              <p style="margin:16px 0 0" data-i18n="r1.p2">Para obtenerlo, una empresa debe acreditar el manejo correcto de los alimentos desde su recepción hasta su servicio: control de temperatura en cada eslabón de la cadena, almacenamiento separado de productos crudos y cocidos, higiene rigurosa del personal y de las instalaciones, control de fauna nociva, y trazabilidad documentada de cada insumo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="cert dark">
+        <div class="cert-grid">
+          <div class="cert-mark"><img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/O.svg" alt="Kosher"></div>
+          <div class="cert-text">
+            <div data-ornament data-w="180" data-c="var(--white)"></div>
+            <h2><span class="cert-caps" data-i18n="r2.caps">BANQUETES</span><span class="cert-italic" data-i18n="r2.italic">Kosher</span></h2>
+            <div class="cert-meta">
+              <div><div class="cert-meta-label" data-i18n="lbl.issuer">Emisor</div><div class="cert-meta-value" data-i18n="r2.issuer">SUPERVISIÓN RABÍNICA</div></div>
+              <div><div class="cert-meta-label" data-i18n="lbl.status">Estado</div><div class="cert-meta-value" data-i18n="r2.status">Por evento</div></div>
+            </div>
+            <div class="cert-body">
+              <p style="margin:0" data-i18n="r2.p1">Kohlmann ofrece servicios de banquetes con certificación Kosher de talla internacional. Trabajamos bajo supervisión rabínica directa para eventos de la comunidad judía en la Ciudad de México y en provincia.</p>
+              <p style="margin:16px 0 0" data-i18n="r2.p2">La certificación se otorga evento por evento: el rabino designado inspecciona la cocina, los insumos, los utensilios y el personal antes del servicio. Cumplimos con las reglas dietéticas — kashrut — sin sacrificar el nivel de la carta.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="cert">
+        <div class="cert-grid">
+          <div class="cert-mark"><img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/C.svg" alt="Profesionales en Eventos"></div>
+          <div class="cert-text">
+            <div data-ornament data-w="180"></div>
+            <h2><span class="cert-caps" data-i18n="r3.caps">CONSEJO MEXICANO DE</span><span class="cert-italic" data-i18n="r3.italic">Profesionales en Eventos</span></h2>
+            <div class="cert-meta">
+              <div><div class="cert-meta-label" data-i18n="lbl.issuer">Emisor</div><div class="cert-meta-value" data-i18n="r3.issuer">CMPE</div></div>
+              <div><div class="cert-meta-label" data-i18n="lbl.status">Estado</div><div class="cert-meta-value" data-i18n="r3.status">Miembro activo</div></div>
+            </div>
+            <div class="cert-body">
+              <p style="margin:0" data-i18n="r3.p1">El CMPE es el organismo colegiado que reúne y representa a los profesionales del sector eventos en México. Nuestra membresía activa respalda la trayectoria del equipo, la formalidad de la empresa y el cumplimiento de los códigos de ética y servicio del sector.</p>
+              <p style="margin:16px 0 0" data-i18n="r3.p2">Como miembros, participamos en programas de capacitación continua, auditorías de pares, y la actualización de las mejores prácticas de la industria.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="cert dark">
+        <div class="cert-grid">
+          <div class="cert-mark"><img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/E.svg" alt="Turística"></div>
+          <div class="cert-text">
+            <div data-ornament data-w="180" data-c="var(--white)"></div>
+            <h2><span class="cert-caps" data-i18n="r4.caps">MODELO DE EXCELENCIA</span><span class="cert-italic" data-i18n="r4.italic">Turística</span></h2>
+            <div class="cert-meta">
+              <div><div class="cert-meta-label" data-i18n="lbl.issuer">Emisor</div><div class="cert-meta-value" data-i18n="r4.issuer">MEXTCDMX</div></div>
+              <div><div class="cert-meta-label" data-i18n="lbl.status">Estado</div><div class="cert-meta-value" data-i18n="r4.status">Vigente</div></div>
+            </div>
+            <div class="cert-body">
+              <p style="margin:0" data-i18n="r4.p1">El Modelo de Excelencia Turística mextCDMX es un sistema de gestión de calidad que se otorga a empresas turísticas y de servicios afines que demuestran la implementación de procesos documentados, controles, mejora continua y resultados verificables en la atención al cliente.</p>
+              <p style="margin:16px 0 0" data-i18n="r4.p2">Para Kohlmann ha significado formalizar lo que durante años fue conocimiento tácito: protocolos de servicio, planes de contingencia, mediciones de satisfacción, y un mecanismo de mejora trimestral que ya forma parte de la operación.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+  <script>
+    window.I18N_EN = {
+      "ph.caps": "CULINARY CULTURE AND AN EXCEPTIONAL",
+      "ph.italic": "savoir-faire",
+      "ph.intro": "Four distinctions back the operation of the house. They are formal requirements — but, more than that, they are a way of obliging us to sustain a standard every day, not only at the most important events.",
+      "lbl.issuer": "Issuer",
+      "lbl.status": "Status",
+      "r1.caps": "DISTINTIVO",
+      "r1.italic": "H",
+      "r1.issuer": "MINISTRY OF TOURISM",
+      "r1.status": "Current",
+      "r1.p1": "The Distintivo H is a recognition granted by the Federal Government's Ministry of Tourism to companies that comply with the good hygiene and sanitation practices established in NMX-F-605-NORMEX-2018.",
+      "r1.p2": "To obtain it, a company must demonstrate the correct handling of food from receipt to service: temperature control at every link of the chain, separate storage of raw and cooked products, rigorous hygiene of staff and facilities, pest control, and documented traceability of every ingredient.",
+      "r2.caps": "KOSHER",
+      "r2.italic": "Catering",
+      "r2.issuer": "RABBINICAL SUPERVISION",
+      "r2.status": "Per event",
+      "r2.p1": "Kohlmann offers catering services with internationally recognised Kosher certification. We work under direct rabbinical supervision for events of the Jewish community in Mexico City and beyond.",
+      "r2.p2": "The certification is granted event by event: the designated rabbi inspects the kitchen, the ingredients, the utensils and the staff before service. We comply with the dietary rules — kashrut — without sacrificing the level of the menu.",
+      "r3.caps": "MEXICAN COUNCIL OF",
+      "r3.italic": "Event Professionals",
+      "r3.issuer": "CMPE",
+      "r3.status": "Active member",
+      "r3.p1": "The CMPE is the professional body that brings together and represents professionals of the events sector in Mexico. Our active membership endorses the team's track record, the formality of the company and compliance with the sector's codes of ethics and service.",
+      "r3.p2": "As members, we take part in continuous training programmes, peer audits, and the updating of the industry's best practices.",
+      "r4.caps": "MODEL OF TOURISM",
+      "r4.italic": "Excellence",
+      "r4.issuer": "MEXTCDMX",
+      "r4.status": "Current",
+      "r4.p1": "The mextCDMX Tourism Excellence Model is a quality management system granted to tourism and related-service companies that demonstrate the implementation of documented processes, controls, continuous improvement and verifiable results in customer care.",
+      "r4.p2": "For Kohlmann it has meant formalising what for years was tacit knowledge: service protocols, contingency plans, satisfaction measurements, and a quarterly improvement mechanism that is now part of the operation."
+    };
+  </script>
+  <script src="shared.js"></script>
+</body>
+</html>

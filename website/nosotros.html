@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nosotros · Kohlmann Banquetes</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .essay { padding: 120px 0; background: var(--cream); }
+  .essay-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .essay-text-wrap { display: flex; }
+  .essay-text-wrap.to-right { justify-content: flex-end; }
+  .essay-text-wrap.to-left { justify-content: flex-start; }
+  .essay-text { max-width: 560px; display: flex; flex-direction: column; gap: 24px; }
+  .essay-text h2 { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+  .essay-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.75rem, 3.4vw, 3rem); line-height: 1.08; text-transform: uppercase; color: var(--navy); }
+  .essay-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.25rem, 4.4vw, 4rem); line-height: 0.96; letter-spacing: -0.005em; color: var(--navy); }
+  .essay-body { font-family: var(--font-serif); font-size: 18px; line-height: 1.78; letter-spacing: 0.04em; color: var(--navy); text-align: justify; hyphens: auto; }
+  .essay-photo { width: 100%; height: 100%; min-height: 400px; overflow: hidden; background: var(--navy-deep); }
+  .essay-photo img { width: 100%; height: 100%; object-fit: cover; filter: var(--image-filter); display: block; }
+  @media (max-width: 880px) {
+    .essay-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .essay-photo { min-height: 320px; }
+  }
+
+  .stats { background: var(--navy); color: var(--white); padding: 100px 24px; }
+  .stats-wrap { max-width: 1100px; margin: 0 auto; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .stat { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; border-top: 1px solid rgba(255,255,255,0.30); padding: 32px 12px 0; }
+  .stat-n { font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: clamp(2.5rem, 4.2vw, 4rem); line-height: 1; letter-spacing: -0.01em; color: var(--white); }
+  .stat-l { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.82); }
+  @media (max-width: 720px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .quote-sec { background: var(--cream-warm); padding: 140px 24px; }
+  .quote-inner { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px; }
+  .quote-inner blockquote { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: clamp(1.75rem, 3.4vw, 2.75rem); line-height: 1.25; letter-spacing: -0.005em; color: var(--navy); max-width: 720px; }
+  .quote-cite { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.30em; text-transform: uppercase; color: var(--navy-60); }
+
+  .cta { background: var(--cream); padding: 120px 24px; }
+  .cta-inner { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
+  .cta-inner h2 { margin: 0; display: flex; flex-direction: column; align-items: center; }
+  .cta-caps { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 2.8vw, 2.5rem); line-height: 1.1; text-transform: uppercase; color: var(--navy); }
+  .cta-italic { font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: clamp(2.25rem, 4vw, 4rem); line-height: 0.96; letter-spacing: -0.01em; color: var(--navy); }
+</style>
+</head>
+<body>
+  <div id="nav-root" data-current="nosotros"></div>
+
+  <main>
+    <section>
+      <div class="ph-photo">
+        <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina19.jpg" alt="">
+      </div>
+      <div class="ph-text">
+        <div class="ph-inner">
+          <div data-ornament data-w="320"></div>
+          <h1>
+            <span class="ph-caps" data-i18n="ph.caps">UNA CASA PARA</span>
+            <span class="ph-italic" data-i18n="ph.italic">celebrar</span>
+          </h1>
+          <p class="ph-intro" data-i18n="ph.intro">Cuando Eduardo Kohlmann inauguró la casa en 1968, lo hizo con una idea: tratar cada celebración como una pieza única, diseñada para honrar la ocasión, el lugar y a quienes lo habitan. Más de cincuenta años después, la convicción no ha cambiado.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="reveal">
+      <section class="essay">
+        <div class="essay-grid">
+          <div class="essay-text-wrap to-right">
+            <div class="essay-text">
+              <div data-ornament data-w="200"></div>
+              <h2><span class="essay-caps" data-i18n="e1.caps">UNA</span><span class="essay-italic" data-i18n="e1.italic">trayectoria</span></h2>
+              <div class="essay-body">
+                <p style="margin:0" data-i18n="e1.p1">La cocina mexicana en los años sesenta apenas comenzaba a reconocerse, como hoy, patrimonio de la humanidad. Kohlmann nació en ese tiempo con una vocación clara — ofrecer banquetes que honraran a quien los pedía: bodas en jardines coloniales, recepciones diplomáticas, bautizos de familia. La carta cambió con los años, pero la disposición — _saber-hacer_, dijimos entonces — no.</p>
+                <p style="margin:20px 0 0" data-i18n="e1.p2">Hoy, más de cinco mil eventos después, la casa atiende a generaciones que llegan recomendadas por sus padres. Es, quizá, la única medida de éxito que importa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="essay-photo">
+            <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina5.jpg" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="stats">
+        <div class="stats-wrap">
+          <div class="stats-grid">
+            <div class="stat"><span class="stat-n">1968</span><span class="stat-l" data-i18n="stat1">Año de fundación</span></div>
+            <div class="stat"><span class="stat-n">+5,000</span><span class="stat-l" data-i18n="stat2">Eventos celebrados</span></div>
+            <div class="stat"><span class="stat-n">200</span><span class="stat-l" data-i18n="stat3">Colaboradores</span></div>
+            <div class="stat"><span class="stat-n">4</span><span class="stat-l" data-i18n="stat4">Certificaciones nacionales</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="essay">
+        <div class="essay-grid">
+          <div class="essay-photo">
+            <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina15.jpg" alt="">
+          </div>
+          <div class="essay-text-wrap to-left">
+            <div class="essay-text">
+              <div data-ornament data-w="200"></div>
+              <h2><span class="essay-caps" data-i18n="e2.caps">UN EQUIPO DE</span><span class="essay-italic" data-i18n="e2.italic">200 manos</span></h2>
+              <div class="essay-body">
+                <p style="margin:0" data-i18n="e2.p1">Detrás de cada celebración hay cocineros, capitanes, meseros, jardineros, maestros de servicio y administrativos. Muchos llevan más de veinte años en la casa. Son ellos, y no la cocina, los que sostienen la promesa.</p>
+                <p style="margin:20px 0 0" data-i18n="e2.p2">Trabajamos con doscientas personas en planta y un círculo ampliado de proveedores cuidadosamente seleccionados — quesos, vinos, flores, montaje, música. Cada uno responde a la misma regla: la atención no se delega.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="quote-sec">
+        <div class="quote-inner">
+          <div data-ornament data-w="240"></div>
+          <blockquote data-i18n="quote.text">"La cocina cambia con las épocas; la atención, jamás. Cada celebración merece la mirada de una casa que ha visto mil celebraciones antes y, aun así, vive la siguiente como la primera."</blockquote>
+          <div class="quote-cite" data-i18n="quote.cite">EDUARDO KOHLMANN · FUNDADOR</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="essay">
+        <div class="essay-grid">
+          <div class="essay-text-wrap to-right">
+            <div class="essay-text">
+              <div data-ornament data-w="200"></div>
+              <h2><span class="essay-caps" data-i18n="e3.caps">UNA</span><span class="essay-italic" data-i18n="e3.italic">institución</span></h2>
+              <div class="essay-body">
+                <p style="margin:0" data-i18n="e3.p1">Kohlmann ha sido parte de la vida social de la Ciudad de México por más de cinco décadas. La casa ha participado en la historia de la ciudad — como testigo, como anfitrión, como cómplice de los momentos que se recuerdan. Esa continuidad no se planea; se cuida.</p>
+                <p style="margin:20px 0 0" data-i18n="e3.p2">Nuestra sede en Jardines del Pedregal, en el sur de la ciudad, es la cocina central — pero el trabajo de Kohlmann ocurre donde está usted: en su jardín, su salón, su hacienda. Llevamos la casa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="essay-photo">
+            <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina30.jpg" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="reveal">
+      <section class="cta">
+        <div class="cta-inner">
+          <h2>
+            <span class="cta-caps" data-i18n="cta.caps">¿LISTO PARA</span>
+            <span class="cta-italic" data-i18n="cta.italic">conocernos?</span>
+          </h2>
+          <a href="contacto.html" class="btn btn-fill-dark" data-i18n="cta.quote">Solicitar cotización</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+  <script>
+    window.I18N_EN = {
+      "ph.caps": "A HOUSE TO",
+      "ph.italic": "celebrate",
+      "ph.intro": "When Eduardo Kohlmann opened the house in 1968, he did so with one idea: to treat every celebration as a unique piece, designed to honour the occasion, the place and those who inhabit it. More than fifty years later, the conviction has not changed.",
+      "e1.caps": "A",
+      "e1.italic": "track record",
+      "e1.p1": "Mexican cuisine in the sixties was only beginning to be recognised, as it is today, as heritage of humanity. Kohlmann was born in that era with a clear calling — to offer banquets that honoured whoever requested them: weddings in colonial gardens, diplomatic receptions, family christenings. The menu changed over the years, but the disposition — _savoir-faire_, we called it then — did not.",
+      "e1.p2": "Today, more than five thousand events later, the house serves generations that arrive recommended by their parents. It is, perhaps, the only measure of success that matters.",
+      "stat1": "Year founded",
+      "stat2": "Events celebrated",
+      "stat3": "Team members",
+      "stat4": "National certifications",
+      "e2.caps": "A TEAM OF",
+      "e2.italic": "200 hands",
+      "e2.p1": "Behind every celebration there are cooks, captains, waiters, gardeners, service masters and administrators. Many have been with the house for more than twenty years. It is they, and not the kitchen, who uphold the promise.",
+      "e2.p2": "We work with two hundred people on staff and an extended circle of carefully selected suppliers — cheeses, wines, flowers, staging, music. Each one answers to the same rule: attention is not delegated.",
+      "quote.text": "“The cuisine changes with the times; the attention, never. Every celebration deserves the gaze of a house that has seen a thousand celebrations before and, even so, lives the next one as the first.”",
+      "quote.cite": "EDUARDO KOHLMANN · FOUNDER",
+      "e3.caps": "AN",
+      "e3.italic": "institution",
+      "e3.p1": "Kohlmann has been part of the social life of Mexico City for more than five decades. The house has taken part in the history of the city — as witness, as host, as accomplice to the moments that are remembered. That continuity is not planned; it is cared for.",
+      "e3.p2": "Our base in Jardines del Pedregal, in the south of the city, is the central kitchen — but Kohlmann's work happens where you are: in your garden, your hall, your hacienda. We bring the house with us.",
+      "cta.caps": "READY TO",
+      "cta.italic": "meet us?",
+      "cta.quote": "Request a quote"
+    };
+  </script>
+  <script src="shared.js"></script>
+</body>
+</html>
