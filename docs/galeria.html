@@ -11,7 +11,8 @@
   .galeria-section { background: var(--cream); padding: 40px 0 140px; }
   .galeria-grid {
     display: grid; grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 180px; gap: 12px; padding: 0 24px;
+    grid-auto-rows: 220px; gap: 12px; padding: 0 24px;
+    grid-auto-flow: dense;
     max-width: 1500px; margin: 0 auto;
   }
   .galeria-grid button {
@@ -20,7 +21,9 @@
     border: 0; padding: 0; cursor: zoom-in;
     display: block; width: 100%; height: 100%;
   }
-  .galeria-grid button.tall { grid-row: span 2; }
+  .galeria-grid button.tall    { grid-row: span 2; }
+  .galeria-grid button.wide    { grid-column: span 6; }
+  .galeria-grid button.feature { grid-column: span 6; grid-row: span 2; }
   .galeria-grid img {
     width: 100%; height: 100%; object-fit: cover; display: block;
     filter: var(--image-filter);
@@ -28,9 +31,15 @@
   }
   .galeria-grid button:hover img { transform: scale(1.05); }
 
+  @media (max-width: 1100px) {
+    .galeria-grid { grid-auto-rows: 190px; }
+  }
   @media (max-width: 880px) {
-    .galeria-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 140px; }
-    .galeria-grid button, .galeria-grid button.tall { grid-column: span 3; grid-row: span 1; }
+    .galeria-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 160px; }
+    .galeria-grid button,
+    .galeria-grid button.tall,
+    .galeria-grid button.wide,
+    .galeria-grid button.feature { grid-column: span 3; grid-row: span 1; }
   }
 </style>
 </head>
@@ -82,12 +91,19 @@
         "assets/gallery/20.png", "assets/gallery/21.png", "assets/gallery/22.png", "assets/gallery/23.png",
         "assets/gallery/24.png", "assets/gallery/25.png", "assets/gallery/26.png"
       ];
-      var TALL = { 0: true, 5: true, 11: true, 16: true, 22: true };
+      var SHAPES = {
+        0: "feature",
+        4: "tall",
+        9: "wide",
+        13: "tall",
+        18: "feature",
+        24: "wide"
+      };
       var grid = document.getElementById("galeriaGrid");
       PHOTOS.forEach(function (src, i) {
         var btn = document.createElement("button");
         btn.type = "button";
-        if (TALL[i]) btn.className = "tall";
+        if (SHAPES[i]) btn.className = SHAPES[i];
         btn.setAttribute("data-lightbox", src);
         var img = document.createElement("img");
         img.src = src; img.alt = ""; img.loading = "lazy";

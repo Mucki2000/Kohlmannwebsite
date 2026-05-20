@@ -29,7 +29,7 @@
   --white:        #FFFFFF;
 
   /* ---------- Color: image treatment ---------- */
-  --image-filter: grayscale(1) contrast(1.05) brightness(0.98);
+  --image-filter: none;
 
   /* ---------- Color: legacy aliases (kept for back-compat) ---------- */
   --paper:        var(--cream);
