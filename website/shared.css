@@ -38,6 +38,14 @@ a { color: inherit; }
   font-size: 28px; line-height: 0.96; letter-spacing: 0.04em;
   text-transform: uppercase; color: var(--white);
 }
+.wordmark .wordmark-tagline {
+  font-family: var(--font-sans); font-weight: 400; font-style: normal;
+  font-size: 9.5px; line-height: 1; letter-spacing: 0.36em;
+  text-transform: uppercase; color: rgba(255,255,255,0.72);
+  margin-top: 10px;
+}
+.footer .wordmark .wordmark-tagline { font-size: 10.5px; margin-top: 12px; }
+.mobile-top .wordmark .wordmark-tagline { font-size: 8.5px; margin-top: 8px; }
 
 .nav-right { display: flex; justify-content: flex-end; align-items: center; gap: 12px; align-self: flex-start; margin-top: 4px; }
 .reservas-btn {

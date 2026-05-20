@@ -40,16 +40,16 @@
   <main>
     <section>
       <div class="ph-photo">
-        <img src="https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina30.jpg" alt="">
+        <img src="assets/gallery/1.png" alt="">
       </div>
       <div class="ph-text">
         <div class="ph-inner">
           <div data-ornament data-w="320"></div>
           <h1>
-            <span class="ph-caps" data-i18n="ph.caps">UNA CASA DE</span>
-            <span class="ph-italic" data-i18n="ph.italic">memorias</span>
+            <span class="ph-caps" data-i18n="ph.caps">UNA GALERÍA DE</span>
+            <span class="ph-italic" data-i18n="ph.italic">momentos</span>
           </h1>
-          <p class="ph-intro" data-i18n="ph.intro">Más de cinco mil eventos. Una selección de los que más amamos — bodas, recepciones, celebraciones íntimas. Las fotografías honran la discreción de nuestros clientes; los detalles, la del oficio.</p>
+          <p class="ph-intro" data-i18n="ph.intro">Una selección de los eventos que hemos tenido el privilegio de organizar. Las fotografías respetan la discreción de nuestros clientes. Los detalles hablan por sí solos.</p>
         </div>
       </div>
     </section>
@@ -65,29 +65,24 @@
 
   <script>
     window.I18N_EN = {
-      "ph.caps": "A HOUSE OF",
-      "ph.italic": "memories",
-      "ph.intro": "More than five thousand events. A selection of the ones we love most — weddings, receptions, intimate celebrations. The photographs honour the discretion of our clients; the details, that of the craft."
+      "ph.caps": "A GALLERY OF",
+      "ph.italic": "moments",
+      "ph.intro": "A selection of the events we have had the privilege of organising. The photographs respect the discretion of our clients. The details speak for themselves."
     };
   </script>
   <script src="shared.js"></script>
   <script>
     (function () {
       var PHOTOS = [
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina5.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina15.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina19.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina30.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina5.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina15.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina19.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina30.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina5.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina19.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina30.jpg",
-        "https://kohlmann.com.mx/wp-content/uploads/2025/09/Kholmann-Jardin-Santa-RIta-Cocina15.jpg"
+        "assets/gallery/1.png",  "assets/gallery/2.png",  "assets/gallery/3.png",  "assets/gallery/4.png",
+        "assets/gallery/5.jpg",  "assets/gallery/6.jpg",  "assets/gallery/7.png",  "assets/gallery/8.png",
+        "assets/gallery/9.png",  "assets/gallery/10.png", "assets/gallery/11.png", "assets/gallery/12.png",
+        "assets/gallery/13.png", "assets/gallery/14.png", "assets/gallery/15.png", "assets/gallery/16.png",
+        "assets/gallery/17.png", "assets/gallery/18.png", "assets/gallery/19.png", "assets/gallery/19.1.png",
+        "assets/gallery/20.png", "assets/gallery/21.png", "assets/gallery/22.png", "assets/gallery/23.png",
+        "assets/gallery/24.png", "assets/gallery/25.png", "assets/gallery/26.png"
       ];
-      var TALL = { 0: true, 4: true, 7: true, 11: true };
+      var TALL = { 0: true, 5: true, 11: true, 16: true, 22: true };
       var grid = document.getElementById("galeriaGrid");
       PHOTOS.forEach(function (src, i) {
         var btn = document.createElement("button");

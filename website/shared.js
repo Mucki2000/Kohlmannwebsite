@@ -6,9 +6,7 @@
   var LINKS = [
     { href: "nosotros.html",        key: "nosotros",        es: "Nosotros" },
     { href: "servicios.html",       key: "servicios",       es: "Servicios" },
-    { href: "menu.html",            key: "menu",            es: "Menú" },
     { href: "galeria.html",         key: "galeria",         es: "Galería" },
-    { href: "certificaciones.html", key: "certificaciones", es: "Certificaciones" },
     { href: "contacto.html",        key: "contacto",        es: "Contacto" }
   ];
 
@@ -30,7 +28,8 @@
 
   var WORDMARK =
     '<a href="index.html" class="wordmark" aria-label="Eduardo Kohlmann Banquetes">' +
-    '<span>Eduardo</span><span>Kohlmann</span><span>Banquetes</span></a>';
+    '<span>Eduardo</span><span>Kohlmann</span><span>Banquetes</span>' +
+    '<span class="wordmark-tagline">[ Pasi&oacute;n por servir ]</span></a>';
 
   function navHTML(current) {
     var row2 = LINKS.map(function (l) {
@@ -84,7 +83,7 @@
         '</div>' +
         '<div class="footer-legal">' +
           '<span>Kohlmann Banquetes ' + new Date().getFullYear() + ' ©</span>' +
-          '<a href="#">' + t("footer.privacy", "Aviso de Privacidad") + '</a>' +
+          '<a href="aviso-de-privacidad.html">' + t("footer.privacy", "Aviso de Privacidad") + '</a>' +
         '</div>' +
       '</div></footer>';
   }
