@@ -64,10 +64,8 @@
 
   .gal { background: var(--cream); padding: 120px 0 140px; }
   .gal-head { max-width: 1280px; margin: 0 auto 80px; padding: 0 24px; display: flex; flex-direction: column; align-items: center; gap: 32px; }
-  .gal-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; padding: 0 24px; max-width: 1480px; margin: 0 auto; }
-  .gal-grid > div { grid-column: span 2; overflow: hidden; background: var(--cream-deep); }
-  .gal-grid > div.tall { aspect-ratio: 3/4; }
-  .gal-grid > div.sq { aspect-ratio: 1/1; }
+  .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 0 24px; max-width: 1480px; margin: 0 auto; }
+  .gal-grid > div { aspect-ratio: 1/1; overflow: hidden; background: var(--cream-deep); }
   .gal-grid img {
     width: 100%; height: 100%; object-fit: cover; display: block;
     filter: var(--image-filter);
@@ -76,7 +74,6 @@
   .gal-grid > div:hover img { transform: scale(1.04); }
   @media (max-width: 880px) {
     .gal-grid { grid-template-columns: repeat(2, 1fr); }
-    .gal-grid > div { grid-column: span 1; }
   }
 
   .certs { background: var(--navy); color: var(--white); padding: 140px 24px; }
@@ -160,12 +157,12 @@
           </div>
         </div>
         <div class="gal-grid">
-          <div class="tall"><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_1.png" alt=""></div>
-          <div class="sq"><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_2.png" alt=""></div>
-          <div class="sq"><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_3.png" alt=""></div>
-          <div class="tall"><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_4.png" alt=""></div>
-          <div class="sq"><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_5.png" alt=""></div>
-          <div class="sq"><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_6.png" alt=""></div>
+          <div><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_1.png" alt=""></div>
+          <div><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_2.png" alt=""></div>
+          <div><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_3.png" alt=""></div>
+          <div><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_4.png" alt=""></div>
+          <div><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_5.png" alt=""></div>
+          <div><img loading="lazy" src="assets/moments/MOMENTS_UNIQUE_6.png" alt=""></div>
         </div>
       </section>
     </div>
