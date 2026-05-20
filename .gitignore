@@ -3,5 +3,4 @@
 # documents, IDE config, etc.) is excluded by default.
 /*
 !/.gitignore
-!/colors_and_type.css
-!/website/
+!/docs/
